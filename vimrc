@@ -27,7 +27,6 @@ set hidden
 
 "Display
 set number
-set list listchars=tab:\▸\-
 set title
 set showcmd
 set wildmode=list:longest
@@ -41,6 +40,7 @@ set matchpairs=(:),{:},[:],<:>
 syntax on
 
 "Character
+set encoding=utf-8
 set fenc=utf-8
 set virtualedit=onemore
 set autoindent
@@ -60,7 +60,7 @@ set hlsearch
 nmap <Esc><Esc> :nohlsearch<CR><Esc>
 
 "Plugin
-map <C-n> :NERDTreeToggle<CR>
+nnoremap <silent><C-n> :NERDTreeToggle<CR>
 let g:user_emmet_expandabbr_key = '<C-e>'
 
 "Color Scheme
