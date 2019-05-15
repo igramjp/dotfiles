@@ -15,6 +15,7 @@ Plugin 'othree/html5-syntax.vim'
 Plugin 'hail2u/vim-css3-syntax'
 Plugin 'pangloss/vim-javascript'
 Plugin 'rust-lang/rust.vim'
+Plugin 'racer-rust/vim-racer'
 
 call vundle#end()
 filetype plugin indent on
@@ -62,6 +63,12 @@ nmap <Esc><Esc> :nohlsearch<CR><Esc>
 "Plugin
 nnoremap <silent><C-n> :NERDTreeToggle<CR>
 let g:user_emmet_expandabbr_key = '<C-e>'
+let g:racer_cmd = '~/.cargo/bin/racer'
+let g:racer_experimental_completer = 1
+au FileType rust nmap gd <Plug>(rust-def)
+au FileType rust nmap gs <Plug>(rust-def-split)
+au FileType rust nmap gx <Plug>(rust-def-vertical)
+au FileType rust nmap <leader>gd <Plug>(rust-doc)
 
 "Color Scheme
 set guifont=Inconsolata:h14
