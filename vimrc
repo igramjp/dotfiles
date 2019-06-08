@@ -71,14 +71,6 @@ au FileType rust nmap gs <Plug>(rust-def-split)
 au FileType rust nmap gx <Plug>(rust-def-vertical)
 au FileType rust nmap <leader>gd <Plug>(rust-doc)
 
-"Terminal
-if has('vim_starting')
-    vs
-    wincmd l
-    terminal ++curwin
-    wincmd h
-endif
-
 "Color Scheme
 set guifont=Inconsolata:h14
 set background=dark
