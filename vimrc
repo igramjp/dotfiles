@@ -16,6 +16,7 @@ Plugin 'hail2u/vim-css3-syntax'
 Plugin 'pangloss/vim-javascript'
 Plugin 'rust-lang/rust.vim'
 Plugin 'racer-rust/vim-racer'
+Plugin 'kannokanno/previm'
 
 call vundle#end()
 filetype plugin indent on
@@ -66,6 +67,9 @@ let g:user_emmet_expandabbr_key = '<C-e>'
 let g:racer_cmd = '~/.cargo/bin/racer'
 let g:racer_experimental_completer = 1
 let g:rustfmt_autosave = 1
+let g:previm_open_cmd = 'open -a Firefox'
+let g:previm_disable_default_css = 1
+let g:previm_custom_css_path = '~/Documents/Vim/github-markdown.css'
 au FileType rust nmap gd <Plug>(rust-def)
 au FileType rust nmap gs <Plug>(rust-def-split)
 au FileType rust nmap gx <Plug>(rust-def-vertical)
@@ -75,3 +79,4 @@ au FileType rust nmap <leader>gd <Plug>(rust-doc)
 set guifont=Inconsolata:h14
 set background=dark
 colorscheme hybrid
+
