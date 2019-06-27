@@ -17,9 +17,11 @@ Plugin 'pangloss/vim-javascript'
 Plugin 'rust-lang/rust.vim'
 Plugin 'racer-rust/vim-racer'
 Plugin 'kannokanno/previm'
+Plugin 'kien/ctrlp.vim'
 
 call vundle#end()
 filetype plugin indent on
+
 
 "System
 set nobackup
@@ -70,10 +72,26 @@ let g:rustfmt_autosave = 1
 let g:previm_open_cmd = 'open -a Firefox'
 let g:previm_disable_default_css = 1
 let g:previm_custom_css_path = '~/Documents/Vim/github-markdown.css'
+let Tlist_Show_One_File = 1
+let Tlist_Use_Right_Window = 1
+let Tlist_Exit_OnlyWindow = 1
+map <silent> <leader>t :TlistToggle<cr>
 au FileType rust nmap gd <Plug>(rust-def)
 au FileType rust nmap gs <Plug>(rust-def-split)
 au FileType rust nmap gx <Plug>(rust-def-vertical)
 au FileType rust nmap <leader>gd <Plug>(rust-doc)
+function! CtrlP_OpenAtCenter(action, line)
+    let cw = bufwinnr('.')
+    for n in range(0, bufnr('$'))
+        let bw = bufwinnr(n)
+        if bw == cw && buflisted(n)
+            exe bw . 'wincmd w'
+            break
+        endif
+    endfor
+    call call('ctrlp#acceptfile', [a:action, a:line])
+endfunction
+let g:ctrlp_open_func = {'files': 'CtrlP_OpenAtCenter'}
 
 "Color Scheme
 set guifont=Inconsolata:h14
