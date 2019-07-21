@@ -19,6 +19,7 @@ Plugin 'rust-lang/rust.vim'
 Plugin 'racer-rust/vim-racer'
 Plugin 'kannokanno/previm'
 Plugin 'kien/ctrlp.vim'
+Plugin 'vim-airline/vim-airline'
 
 call vundle#end()
 filetype plugin indent on
