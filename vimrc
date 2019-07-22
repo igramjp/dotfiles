@@ -99,5 +99,5 @@ let g:ctrlp_open_func = {'files': 'CtrlP_OpenAtCenter'}
 "Color Scheme
 set guifont=Inconsolata:h14
 set background=dark
-colorscheme hybrid
+colorscheme molokai
 
