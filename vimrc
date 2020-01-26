@@ -96,6 +96,11 @@ function! CtrlP_OpenAtCenter(action, line)
     call call('ctrlp#acceptfile', [a:action, a:line])
 endfunction
 let g:ctrlp_open_func = {'files': 'CtrlP_OpenAtCenter'}
+set tags=.tags
+let g:tagbar_width = 30
+let g:tagbar_autoshowtag = 1
+set splitbelow
+set termwinsize=20x0
 
 "Color Scheme
 set guifont=Inconsolata:h14
