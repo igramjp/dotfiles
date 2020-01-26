@@ -1,4 +1,3 @@
-"Vundle
 set nocompatible
 filetype off
 
@@ -7,7 +6,7 @@ call vundle#begin()
 
 Plugin 'VundleVim/Vundle.vim'
 Plugin 'scrooloose/nerdtree'
-Plugin 'taglist.vim'
+Plugin 'vim-scripts/taglist.vim'
 Plugin 'majutsushi/tagbar'
 Plugin 'tpope/vim-surround'
 Plugin 'mattn/emmet-vim'
@@ -20,6 +19,8 @@ Plugin 'racer-rust/vim-racer'
 Plugin 'kannokanno/previm'
 Plugin 'kien/ctrlp.vim'
 Plugin 'vim-airline/vim-airline'
+Plugin 'rking/ag.vim'
+Plugin 'sbl/scvim'
 
 call vundle#end()
 filetype plugin indent on
@@ -100,4 +101,3 @@ let g:ctrlp_open_func = {'files': 'CtrlP_OpenAtCenter'}
 set guifont=Inconsolata:h14
 set background=dark
 colorscheme molokai
-
