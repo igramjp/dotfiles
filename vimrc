@@ -21,6 +21,8 @@ Plugin 'kien/ctrlp.vim'
 Plugin 'vim-airline/vim-airline'
 Plugin 'rking/ag.vim'
 Plugin 'sbl/scvim'
+Plugin 'vim-ruby/vim-ruby'
+Plugin 'casecommons/vim-rails'
 
 call vundle#end()
 filetype plugin indent on
